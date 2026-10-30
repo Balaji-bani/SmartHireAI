@@ -50,132 +50,139 @@ st.set_page_config(
 
 )
 
-
-
 # Professional styling: native Streamlit components remain accessible.
-
 st.markdown(
-
     """
-
     <style>
-
     /* Improve text contrast across the dashboard */
-
     [data-testid="stAppViewContainer"] {
-
         background: #f6f8fc;
-
         color: #172033;
-
     }
-
-
 
     [data-testid="stHeader"] {
-
         background: #f6f8fc;
-
     }
-
-
 
     [data-testid="stMarkdownContainer"],
-
     [data-testid="stMarkdownContainer"] p,
-
     [data-testid="stMarkdownContainer"] li,
-
     [data-testid="stWidgetLabel"] p,
-
     [data-testid="stCaptionContainer"] {
-
         color: #172033;
-
     }
-
-
 
     h1, h2, h3, h4, label {
-
         color: #172033;
-
     }
-
-
 
     [data-testid="stMetric"] {
-
         background: #ffffff;
-
         color: #172033;
-
     }
-
-
 
     [data-testid="stMetricLabel"],
-
     [data-testid="stMetricValue"] {
-
         color: #172033;
-
     }
-
-
 
     [data-testid="stTextInput"] input,
-
     [data-testid="stTextArea"] textarea {
-
         background: #ffffff;
-
         color: #172033;
-
     }
 
-    .block-container {padding-top: 1.6rem; padding-bottom: 2.5rem; max-width: 1400px;}
+    .block-container {
+        padding-top: 1.6rem;
+        padding-bottom: 2.5rem;
+        max-width: 1400px;
+    }
 
-    [data-testid="stAppViewContainer"] {background: #f6f8fc;}
+    [data-testid="stAppViewContainer"] {
+        background: #f6f8fc;
+    }
 
-    [data-testid="stSidebar"] {background: #eef2f8;}
+    [data-testid="stSidebar"] {
+        background: #eef2f8;
+    }
 
     .hero {
-
-        padding: 1.35rem 1.5rem; border-radius: 18px;
-
+        padding: 1.35rem 1.5rem;
+        border-radius: 18px;
         background: linear-gradient(120deg, #14233b 0%, #2456a6 100%);
-
-        color: white; margin-bottom: 1.1rem;
-
+        color: white;
+        margin-bottom: 1.1rem;
     }
 
-    .hero h1 {color: white; margin: 0; font-size: 2rem;}
+    .hero h1 {
+        color: white;
+        margin: 0;
+        font-size: 2rem;
+    }
 
-    .hero p {color: #e5edff; margin: .45rem 0 0 0;}
+    .hero p {
+        color: #e5edff;
+        margin: .45rem 0 0 0;
+    }
 
-    .section-note {color: #5b6475; font-size: .92rem;}
+    .section-note {
+        color: #5b6475;
+        font-size: .92rem;
+    }
 
     div[data-testid="stMetric"] {
-
-        background: white; border: 1px solid #e5eaf2;
-
-        padding: 14px 16px; border-radius: 14px;
-
+        background: white;
+        border: 1px solid #e5eaf2;
+        padding: 14px 16px;
+        border-radius: 14px;
     }
 
     div[data-testid="stDataFrame"] {
+        border: 1px solid #e5eaf2;
+        border-radius: 12px;
+        overflow: hidden;
+    }
 
-        border: 1px solid #e5eaf2; border-radius: 12px; overflow: hidden;
+    /* Resume uploader button */
+    [data-testid="stFileUploaderDropzone"] button,
+    [data-testid="stFileUploader"] button {
+        background-color: #475569 !important;
+        color: #FFFFFF !important;
+        border: 1px solid #64748B !important;
+        border-radius: 8px !important;
+        box-shadow: none !important;
+    }
 
+    /* Button text */
+    [data-testid="stFileUploaderDropzone"] button p,
+    [data-testid="stFileUploader"] button p {
+        color: #FFFFFF !important;
+    }
+
+    /* Hover effect */
+    [data-testid="stFileUploaderDropzone"] button:hover,
+    [data-testid="stFileUploader"] button:hover {
+        background-color: #64748B !important;
+        border-color: #94A3B8 !important;
+        color: #FFFFFF !important;
+    }
+
+    /* Fix help tooltip visibility */
+    [data-testid="stTooltipContent"] {
+        background-color: #1E293B !important;
+        color: #FFFFFF !important;
+        border: 1px solid #475569 !important;
+        border-radius: 8px !important;
+    }
+
+    [data-testid="stTooltipContent"] p,
+    [data-testid="stTooltipContent"] span {
+        color: #FFFFFF !important;
     }
 
     </style>
-
     """,
-
     unsafe_allow_html=True,
-
 )
 
 
